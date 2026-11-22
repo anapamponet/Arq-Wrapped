@@ -1,0 +1,35 @@
+:root{--bg:#c8ff3d;--tx:#000}
+*{box-sizing:border-box}
+body{margin:0;min-height:100dvh;display:grid;place-items:center;background:#000;font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.app{width:min(100vw,460px);height:min(100dvh,860px);padding:18px 22px 24px;display:flex;flex-direction:column;background:var(--bg);color:var(--tx);transition:background .4s;overflow:auto}
+@media (min-width:500px){.app{border-radius:18px}}
+.prog{display:flex;gap:3px;flex:none}
+.prog i{flex:1;height:4px;border-radius:2px;background:#0003;overflow:hidden}
+.prog i.feito,.prog i.agora{background:#000}
+.prog i.agora{background:#0006}
+.tela{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding-top:16px}
+.chip{align-self:flex-start;padding:4px 12px;border:2px solid #000;border-radius:999px;font-weight:800;font-size:14px}
+h1{margin:0;font-size:clamp(44px,13vw,72px);line-height:.95;letter-spacing:-.035em;font-weight:800}
+h2{margin:0;font-size:clamp(26px,7.4vw,34px);line-height:1.1;letter-spacing:-.02em;font-weight:800}
+p{margin:0;font-size:18px;line-height:1.35;font-weight:500}
+.gigante{font-size:clamp(120px,40vw,190px);line-height:.85;letter-spacing:-.06em;font-weight:800}
+.opcoes{display:grid;gap:10px;margin-top:6px}
+button{font:800 18px "Bricolage Grotesque",system-ui,sans-serif;text-align:left;padding:14px 18px;border:3px solid #000;border-radius:16px;background:none;color:#000;cursor:pointer}
+button:hover:not(:disabled){background:#0001}
+button:focus-visible{outline:3px solid #000;outline-offset:3px}
+button:disabled{cursor:default}
+.opcoes button.certa{background:#000;color:var(--bg)}
+.opcoes button.errada{opacity:.4;text-decoration:line-through}
+.opcoes button.apagada{opacity:.4}
+.cta{align-self:flex-start;background:#000;color:var(--bg);padding:14px 28px;border-radius:999px}
+.cta:hover:not(:disabled){background:#000;transform:scale(1.04)}
+.feedback{font-size:20px;font-weight:800}
+ol,ul.lista{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+ol li,ul.lista li{display:flex;gap:14px;align-items:baseline;font-size:22px;font-weight:800;letter-spacing:-.01em}
+ol li .pos{font-size:36px;letter-spacing:-.04em;min-width:34px}
+li small{margin-left:auto;font-size:15px;font-weight:500;white-space:nowrap}
+ul.lista li{display:block;font-size:20px}
+ul.lista li small{display:block;margin:2px 0 0;font-weight:500;white-space:normal}
+.barra{height:14px;border-radius:7px;background:#0003;overflow:hidden}
+.barra b{display:block;height:100%;background:#000;border-radius:7px}
+@media (prefers-reduced-motion:reduce){.app{transition:none}}
